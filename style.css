@@ -52,13 +52,13 @@
     pointer-events:none;
 }
 .hero-grid{display:grid;grid-template-columns:0.8fr 1.3fr;gap:60px;align-items:start;}
-.hero-grid > div:first-child{
-    margin-top:-3px;
+.hero-grid > div:last-child{
+    align-self:start;
+    margin-top:0;
 }
 .hero-grid{
     position:relative;
     z-index:2;
-}
 }
 .hero h1{font-size:46px}
 .hero-card{
