@@ -174,7 +174,12 @@ footer{text-align:center;padding:40px;color:#64748b}
     color:#0f172a;
     font-size:17px;
     font-weight:600;
-    transition:0.3s;
+
+    display:flex;
+    align-items:center;
+    gap:8px;
+
+    transition:.3s;
     position:relative;
 }
 
@@ -205,4 +210,8 @@ footer{text-align:center;padding:40px;color:#64748b}
     font-weight:700;
     white-space:nowrap;
     box-shadow:0 5px 15px rgba(46,125,50,.25);
+}
+.menu a i{
+    color:#2e7d32;
+    font-size:16px;
 }
