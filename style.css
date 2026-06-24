@@ -2,7 +2,7 @@
 *{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f5f7fb;color:#0f172a}
 .container{max-width:1200px;margin:auto;padding:0 20px}
 .topbar{background:#fff;box-shadow:0 2px 12px rgba(0,0,0,.06)}
-.nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.nav{display:flex;justify-content:flex-start;align-items:center;padding:18px 0}
 .logo{
     display:flex;
     align-items:center;
