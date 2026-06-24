@@ -51,7 +51,7 @@
     background:rgba(255,255,255,.10);
     pointer-events:none;
 }
-.hero-grid{display:grid;grid-template-columns:0.8fr 1.3fr;gap:60px;align-items:start;}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;;gap:60px;align-items:start;}
 .hero-grid > div:last-child{
     align-self:start;
     margin-top:0;
