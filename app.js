@@ -28,3 +28,15 @@ if(chart) chart.destroy();
 chart=new Chart(document.getElementById('chart'),{type:'line',data:{labels:labels,datasets:[{label:'Tiền lãi',data:data,borderColor:'#2e7d32',tension:.4}]}})
 }
 calculate();
+const loanInput = document.getElementById('loan');
+
+loanInput.addEventListener('input', function () {
+    let value = this.value.replace(/\D/g, '');
+
+    if (value === '') {
+        this.value = '';
+        return;
+    }
+
+    this.value = Number(value).toLocaleString('vi-VN');
+});
