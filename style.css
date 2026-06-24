@@ -16,9 +16,24 @@
 .logo span{display:block;font-size:12px;color:#64748b}
 .btn{background:#2e7d32;color:#fff;padding:12px 22px;border:none;border-radius:12px;text-decoration:none;cursor:pointer}
 .hero{padding:70px 0;background:linear-gradient(135deg,#fff,#eaf7ea)}
-.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
 .hero h1{font-size:46px}
-.hero-card{height:280px;border-radius:24px;background:linear-gradient(135deg,#2e7d32,#4caf50);display:flex;align-items:center;justify-content:center;color:#fff;font-size:40px;font-weight:700;box-shadow:0 20px 40px rgba(0,0,0,.12);animation:float 4s ease-in-out infinite}
+.hero-card{
+    background:#fff;
+    border-radius:30px;
+    overflow:hidden;
+    box-shadow:0 20px 60px rgba(0,0,0,.15);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:15px;
+    animation:float 4s ease-in-out infinite;
+}
+.hero-card img{
+    width:100%;
+    display:block;
+    border-radius:30px;
+}
 @keyframes float{50%{transform:translateY(-10px)}}
 .card{background:#fff;padding:30px;border-radius:24px;box-shadow:0 10px 30px rgba(0,0,0,.08);margin-top:40px}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}
@@ -79,5 +94,27 @@ footer{text-align:center;padding:40px;color:#64748b}
 @media(max-width:768px){
     .logo img{
         height:55px;
+    }
+}
+.hero-card img{
+    transition:0.4s;
+}
+
+.hero-card:hover img{
+    transform:scale(1.03);
+}
+@media(max-width:768px){
+
+    .hero-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero-card{
+        margin-top:30px;
+    }
+
+    .hero-card img{
+        max-height:320px;
+        object-fit:cover;
     }
 }
