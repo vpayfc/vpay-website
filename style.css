@@ -18,8 +18,8 @@
 .hero{padding:70px 0;background:linear-gradient(135deg,#fff,#eaf7ea)}
 .hero-grid{display:grid;grid-template-columns:0.8fr 1.3fr;gap:50px;align-items:start;}
 .hero-grid > div:first-child{
-    padding-top:0;
-    margin-top:0;
+    margin-top:-20px;
+}
 }
 .hero h1{font-size:46px}
 .hero-card{
