@@ -3,7 +3,16 @@
 .container{max-width:1200px;margin:auto;padding:0 20px}
 .topbar{background:#fff;box-shadow:0 2px 12px rgba(0,0,0,.06)}
 .nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
-.logo{font-size:30px;font-weight:700;color:#2e7d32}
+.logo{
+    display:flex;
+    align-items:center;
+}
+
+.logo img{
+    height:70px;
+    width:auto;
+    display:block;
+}
 .logo span{display:block;font-size:12px;color:#64748b}
 .btn{background:#2e7d32;color:#fff;padding:12px 22px;border:none;border-radius:12px;text-decoration:none;cursor:pointer}
 .hero{padding:70px 0;background:linear-gradient(135deg,#fff,#eaf7ea)}
@@ -66,4 +75,9 @@ footer{text-align:center;padding:40px;color:#64748b}
 
 .form-group input{
   width:100%;
+}
+@media(max-width:768px){
+    .logo img{
+        height:55px;
+    }
 }
