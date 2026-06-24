@@ -3,7 +3,11 @@ document.getElementById('date').value=new Date().toISOString().slice(0,10);
 let chart;
 function f(n){return Number(n).toLocaleString('vi-VN')+' đ';}
 function calculate(){
-const loan=+document.getElementById('loan').value||0;
+const loan = Number(
+    document.getElementById('loan')
+        .value
+        .replace(/\./g, '')
+) || 0;
 const rate=(+document.getElementById('rate').value||0)/100;
 const months=+document.getElementById('months').value||1;
 const start=new Date(document.getElementById('date').value);
