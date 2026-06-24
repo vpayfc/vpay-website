@@ -54,7 +54,7 @@
 .hero-grid{display:grid;grid-template-columns:1fr 1fr;;gap:60px;align-items:start;}
 .hero-grid > div:last-child{
     align-self:start;
-    margin-top:-20px;
+    margin-top:-30px;
 }
 .hero-grid{
     position:relative;
