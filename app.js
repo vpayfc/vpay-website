@@ -47,6 +47,23 @@ loanInput.addEventListener('input', function () {
 });
 
 
+const loanInput2 =
+document.getElementById('loan2');
+
+loanInput2.addEventListener('input', function () {
+
+    let value = this.value.replace(/\D/g,'');
+
+    if(value===''){
+        this.value='';
+        return;
+    }
+
+    this.value =
+    Number(value).toLocaleString('vi-VN');
+
+});
+
 function calculate2(){
 const loan = Number(
     document.getElementById('loan2')
