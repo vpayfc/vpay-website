@@ -45,3 +45,36 @@ loanInput.addEventListener('input', function () {
 
     this.value = Number(value).toLocaleString('vi-VN');
 });
+
+
+function calculate2(){
+const loan = Number(
+    document.getElementById('loan')
+        .value
+        .replace(/\./g, '')
+) || 0;
+const rate=(+document.getElementById('rate').value||0)/100;
+const months=+document.getElementById('months').value||1;
+const start=new Date(document.getElementById('date').value);
+const principal=loan/months;
+const serviceFee = loan * 0.05;
+const monthlyFee = serviceFee / months;
+let balance=loan,totalInterest=0;
+const body=document.querySelector('#tbl tbody');
+body.innerHTML='';
+for(let i=1;i<=months;i++){
+ const interest=balance*rate;
+ const total = principal + interest + monthlyFee;
+ balance=Math.max(0,balance-principal);
+ totalInterest += interest;
+  const totalFee = serviceFee;
+ const d=new Date(start); d.setMonth(d.getMonth()+i);
+ body.innerHTML += `<tr><td>${i}</td><td>${d.toLocaleDateString('vi-VN')}</td><td>${f(principal)}</td><td>${f(interest + monthlyFee)}</td><td>${f(total)}</td><td>${f(balance)}</td></tr>`;
+
+}
+document.getElementById('totalInterest').innerText =
+    f(totalInterest + serviceFee);
+document.getElementById('totalPay').innerText =
+    f(loan + totalInterest + serviceFee);
+document.getElementById('monthlyPrincipal').innerText=f(principal);
+}
