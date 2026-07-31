@@ -1,5 +1,6 @@
 
 document.getElementById('date').value=new Date().toISOString().slice(0,10);
+document.getElementById('date2').value = new Date().toISOString().slice(0,10);
 function f(n){return Number(n).toLocaleString('vi-VN')+' đ';}
 function calculate(){
 const loan = Number(
