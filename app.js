@@ -75,7 +75,7 @@ const rate=(+document.getElementById('rate2').value||0)/100;
 const months=+document.getElementById('months2').value||1;
 const start=new Date(document.getElementById('date2').value);
 const principal=loan/months;
-const serviceFee = loan * 0.05;
+const serviceFee = loan * 0.02;
 const monthlyFee = serviceFee / months;
 let balance=loan,totalInterest=0;
 const body=document.querySelector('#tbl2 tbody');
